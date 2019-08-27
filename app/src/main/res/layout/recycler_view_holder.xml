@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardCornerRadius="5dp"
+            android:clipChildren="true">
+
+            <!-- Start image header area -->
+            <RelativeLayout
+                    android:id="@+id/image_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:paddingTop="0dp"
+                    android:background="@mipmap/fish_1">
+
+                <TextView android:id="@+id/timer"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:background="#fff"
+                          android:layout_centerHorizontal="true"
+                          android:text="00:00:00"
+                          android:paddingStart="15dp"
+                          android:paddingEnd="15dp"
+                          android:paddingTop="5dp"
+                          android:paddingBottom="5dp"/>
+
+            </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

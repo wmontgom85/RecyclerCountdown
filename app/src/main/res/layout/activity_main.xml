@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+    <TextView android:id="@+id/title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Enter an End Date/Time:"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              android:layout_marginTop="20dp"/>
+
+    <EditText
+            android:id="@+id/end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Choose an end date"
+            android:layout_marginTop="20dp"
+            android:inputType="none"
+            android:focusable="false"
+            android:textAlignment="center"/>
+
+    <EditText
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Choose an end time"
+            android:layout_marginTop="20dp"
+            android:inputType="none"
+            android:focusable="false"
+            android:textAlignment="center"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="20dp"
+                  android:orientation="horizontal"
+                  android:weightSum="2">
+
+        <Button android:id="@+id/submit_coroutines"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_height="wrap_content"
+                android:text="Use Coroutines"
+                android:layout_marginTop="20dp"/>
+
+        <Button android:id="@+id/submit_rx"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:text="Use RX"
+                android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
