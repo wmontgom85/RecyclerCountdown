@@ -1,4 +1,4 @@
-package com.qgiv.recyclercountdown
+package com.wmontgom.recyclercountdown
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

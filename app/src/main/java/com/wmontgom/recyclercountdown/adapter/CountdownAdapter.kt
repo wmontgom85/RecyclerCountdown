@@ -1,4 +1,4 @@
-package com.qgiv.recyclercountdown.adapter
+package com.wmontgom.recyclercountdown.adapter
 
 import android.graphics.drawable.Drawable
 import android.view.View
@@ -7,8 +7,8 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.qgiv.recyclercountdown.R
-import com.qgiv.recyclercountdown.inflate
+import com.wmontgom.recyclercountdown.R
+import com.wmontgom.recyclercountdown.inflate
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable

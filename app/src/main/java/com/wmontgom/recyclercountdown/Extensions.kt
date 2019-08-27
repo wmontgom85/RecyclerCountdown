@@ -1,4 +1,4 @@
-package com.qgiv.recyclercountdown
+package com.wmontgom.recyclercountdown
 
 import android.view.LayoutInflater
 import android.view.View

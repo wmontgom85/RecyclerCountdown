@@ -1,9 +1,9 @@
-package com.qgiv.recyclercountdown
+package com.wmontgom.recyclercountdown
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.qgiv.recyclercountdown.adapter.CountdownAdapter
+import com.wmontgom.recyclercountdown.adapter.CountdownAdapter
 import kotlinx.android.synthetic.main.activity_recycler_countdown.*
 
 class RecyclerCountdown : AppCompatActivity() {
