@@ -73,19 +73,17 @@ class CountdownAdapter : RecyclerView.Adapter<CountdownAdapter.FishHolder>() {
 
             scope.launch {
                 while(true) {
+                    System.out.println("ticking")
                     tickDown()
-
-                    if (t_remaining <= 0) {
-                        job?.cancel()
-                    }
-
                     delay(1000)
                 }
             }
         }
 
         fun tickDown() {
-            timer?.text = t_remaining()
+            val t_string = t_remaining()
+            if (t_string.equals("Ended")) stopCountdown()
+            timer?.text = t_string
         }
 
         override fun stopCountdown() {
@@ -111,7 +109,10 @@ class CountdownAdapter : RecyclerView.Adapter<CountdownAdapter.FishHolder>() {
             disposable = Observable.interval(1, TimeUnit.SECONDS)
                 .startWith(-1L)
                 .takeWhile({ tick -> !stopped.get() })
-                .map{ tick -> t_string = t_remaining() }
+                .map{
+                    System.out.println("ticking")
+                    t_string = t_remaining()
+                }
                 .replay(1)
                 .refCount()
                 .observeOn(AndroidSchedulers.mainThread())
@@ -126,6 +127,7 @@ class CountdownAdapter : RecyclerView.Adapter<CountdownAdapter.FishHolder>() {
         }
 
         fun setText() {
+            if (t_string.equals("Ended")) stopCountdown()
             timer?.text = t_string
         }
     }
